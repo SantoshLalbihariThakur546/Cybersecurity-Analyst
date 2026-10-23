@@ -1,0 +1,15 @@
+# docker compose up --build   ->   http://localhost:5000
+services:
+  northstar:
+    build: .
+    ports: ["5000:5000"]
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      SEED_DEMO_USERS: ${SEED_DEMO_USERS:-true}
+      SEED_DEMO_DATA: ${SEED_DEMO_DATA:-true}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-Northstar!2026}
+      SECRET_KEY: ${SECRET_KEY:-}
+    volumes:
+      - northstar-data:/srv/northstar/data
+volumes:
+  northstar-data:

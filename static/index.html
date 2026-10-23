@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northstar - Cybersecurity Program Platform</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1a2a'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%2342c6d0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <section id="login-screen" class="login hidden" aria-labelledby="login-title">
+    <div class="login-art" aria-hidden="true">
+      <svg viewBox="0 0 120 120" class="login-star"><path d="M60 8l9.6 31.4L102 50 70.6 59.6 60 112 49.4 59.6 18 50l32.4-10.6z"/></svg>
+      <p class="login-quote">Know your threats. Prove your controls. Close your findings.</p>
+    </div>
+    <form id="login-form" class="login-card" autocomplete="off" novalidate>
+      <h1 id="login-title">Northstar</h1>
+      <p class="muted">Cybersecurity program platform</p>
+      <label>Username <input name="username" required maxlength="64" autocomplete="username" autofocus></label>
+      <label>Password <input name="password" type="password" required maxlength="256" autocomplete="current-password"></label>
+      <button type="submit" class="btn primary">Sign in</button>
+      <p id="login-error" class="form-error" role="alert"></p>
+      <details class="demo-hint"><summary>Demo accounts</summary>
+        <p>All use the demo password <code>Northstar!2026</code>.</p>
+        <ul><li><b>admin</b> - CISO, full access</li><li><b>analyst</b> - security analyst</li><li><b>auditor</b> - audit lead</li><li><b>viewer</b> - read-only executive</li></ul>
+      </details>
+    </form>
+  </section>
+
+  <div id="app" class="shell hidden">
+    <aside class="rail" aria-label="Primary">
+      <div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l2.8 9.2L28 16l-9.2 2.8L16 28l-2.8-9.2L4 16l9.2-2.8z"/></svg><span>Northstar</span></div>
+      <nav id="nav"></nav>
+      <div class="rail-foot"><span id="org-name" class="muted"></span></div>
+    </aside>
+    <div class="content">
+      <header class="topbar">
+        <button id="menu-btn" class="btn icon menu-btn" aria-label="Toggle navigation" type="button">Menu</button>
+        <div id="crumb" class="crumb"></div>
+        <span class="spacer"></span>
+        <span id="whoami" class="whoami"></span>
+        <button id="logout" class="btn" type="button">Sign out</button>
+      </header>
+      <main id="main" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/crud.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/overview.js"></script>
+  <script src="/js/threats.js"></script>
+  <script src="/js/incidents.js"></script>
+  <script src="/js/policy.js"></script>
+  <script src="/js/awareness.js"></script>
+  <script src="/js/vulns.js"></script>
+  <script src="/js/audits.js"></script>
+  <script src="/js/admin.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
